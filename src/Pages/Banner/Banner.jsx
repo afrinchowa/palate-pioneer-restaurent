@@ -9,13 +9,13 @@ const Banner = () => {
         <AwesomeSlider
         media={[
           {
-            source: '/path/to/image-0.png',
+            source: 'https://i.ibb.co/D965gkW/mohammad-saifullah-NEq-PK-b-F3-HQ-unsplash.jpg',
           },
           {
-            source: '/path/to/image-1.png',
+            source: '   https://i.ibb.co/wLYkfTr/lex-sirikiat-ymt-Ph-YNK49-A-unsplash.jpg',
           },
           {
-            source: '/path/to/image-2.png',
+            source: 'https://i.ibb.co/jzKDcYX/volodymyr-proskurovskyi-Xh-S0-Ykp-QI2-M-unsplash.jpg',
           },
         ]}
       />
