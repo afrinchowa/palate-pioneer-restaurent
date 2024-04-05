@@ -1,0 +1,243 @@
+[
+    {
+      "_id": "1",
+      "name": "Margherita Pizza",
+      "recipe": "Fresh tomato sauce, mozzarella cheese, basil leaves",
+      "category": "Pizza",
+      "price": 10.99,
+      "image": "https://i.ibb.co/JCTg0W9/pizza.jpg"
+    },
+    {
+      "_id": "2",
+      "name": "Grilled Salmon",
+      "recipe": "Grilled salmon fillet with lemon butter sauce",
+      "category": "Seafood",
+      "price": 16.99,
+      "image": "https://i.ibb.co/6r3sVrV/Grilled-Salmon.jpg"
+    },
+    {
+      "_id": "3",
+      "name": "Chicken Alfredo Pasta",
+      "recipe": "Creamy alfredo sauce with grilled chicken and fettuccine",
+      "category": "Pasta",
+      "price": 12.99,
+      "image": "https://i.ibb.co/4pGVBCR/pasta.jpg"
+    },
+    {
+      "_id": "4",
+      "name": "Caesar Salad",
+      "recipe": "Romaine lettuce, croutons, parmesan cheese, Caesar dressing",
+      "category": "Salad",
+      "price": 8.99,
+      "image": "https://i.ibb.co/ZM6T8xV/Caesar-Salad.jpg"
+    },
+    {
+      "_id": "5",
+      "name": "Beef Burger",
+      "recipe": "Juicy beef patty with lettuce, tomato, onion, and cheese",
+      "category": "Burgers",
+      "price": 9.99,
+      "image": "https://i.ibb.co/2Mm3Ds4/beef-burger.jpg"
+    },
+    {
+      "_id": "6",
+      "name": "Vegetable Stir-Fry",
+      "recipe": "Assorted vegetables stir-fried in a savory sauce",
+      "category": "Vegetarian",
+      "price": 11.99,
+      "image": "https://i.ibb.co/JsbThFd/Vegetable-Stir-Fr.jpg"
+    },
+    {
+      "_id": "7",
+      "name": "Tiramisu",
+      "recipe": "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese",
+      "category": "Desserts",
+      "price": 6.99,
+      "image": "https://i.ibb.co/Yym6K9K/Key-Lime-Pie.jpg"
+    },
+    {
+      "_id": "8",
+      "name": "Chicken Tikka Masala",
+      "recipe": "Grilled chicken in a creamy tomato-based sauce with Indian spices",
+      "category": "Curries",
+      "price": 14.99,
+      "image": "https://i.ibb.co/4SY29nd/Chicken-Tikka-Masala.jpg"
+    },
+    {
+      "_id": "9",
+      "name": "Miso Soup",
+      "recipe": "Traditional Japanese soup with tofu, seaweed, and green onions",
+      "category": "Soups",
+      "price": 4.99,
+      "image": "https://i.ibb.co/9VMbYqK/Miso-Soup.jpg"
+    },
+    {
+      "_id": "10",
+      "name": "Chocolate Lava Cake",
+      "recipe": "Warm chocolate cake with a gooey molten center, served with vanilla ice cream",
+      "category": "Desserts",
+      "price": 7.99,
+      "image": "https://i.ibb.co/1qcXTWs/Chocolate-Lava-Cake.jpg"
+    },
+    {
+      "_id": "11",
+      "name": "Caprese Salad",
+      "recipe": "Fresh tomatoes, mozzarella cheese, basil leaves, balsamic glaze",
+      "category": "Salads",
+      "price": 9.99,
+      "image": "https://i.ibb.co/3rCtPrt/Caprese-Salad.jpg"
+    },
+    {
+      "_id": "12",
+      "name": "Shrimp Scampi",
+      "recipe": "Shrimp sautéed in garlic butter sauce, served over linguine",
+      "category": "Seafood",
+      "price": 15.99,
+      "image": "https://i.ibb.co/tp2kNK6/shirmp.jpg"
+    },
+    {
+      "_id": "13",
+      "name": "Vegetable Spring Rolls",
+      "recipe": "Crispy spring rolls filled with assorted vegetables, served with sweet chili sauce",
+      "category": "Appetizers",
+      "price": 6.99,
+      "image": "https://i.ibb.co/F7bkZgc/Vegetable-Spring-Rolls.jpg"
+    },
+    {
+      "_id": "14",
+      "name": "Margherita Flatbread",
+      "recipe": "Flatbread topped with fresh tomato sauce, mozzarella cheese, basil leaves",
+      "category": "Appetizers",
+      "price": 8.99,
+      "image": "https://i.ibb.co/MBqjsZw/Margherita-Flatbread.jpg"
+    },
+    {
+      "_id": "15",
+      "name": "Veggie Burger",
+      "recipe": "Vegetarian patty with lettuce, tomato, onion, and avocado spread",
+      "category": "Burgers",
+      "price": 10.99,
+      "image": "https://i.ibb.co/wK5tXcf/veg-burger.jpg"
+    },
+    {
+      "_id": "16",
+      "name": "Lemon Garlic Roast Chicken",
+      "recipe": "Roasted chicken marinated in lemon, garlic, and herbs",
+      "category": "Poultry",
+      "price": 13.99,
+      "image": "https://i.ibb.co/vh5hDXV/Lemon-Garlic-Roast-Chicken.jpg"
+    },
+    {
+      "_id": "17",
+      "name": "Beef Lasagna",
+      "recipe": "Layers of pasta, beef, marinara sauce, and melted cheese",
+      "category": "Pasta",
+      "price": 11.99,
+      "image": "https://i.ibb.co/HtqQL0f/lemmon-fruti.jpg"
+    },
+    {
+      "_id": "18",
+      "name": "Margarita Cocktail",
+      "recipe": "Classic cocktail made with tequila, lime juice, and triple sec",
+      "category": "Drinks",
+      "price": 8.99,
+      "image": "https://i.ibb.co/7XmHPBL/Margarita-Cocktail.jpg"
+    },
+    {
+      "_id": "19",
+      "name": "French Onion Soup",
+      "recipe": "Rich broth with caramelized onions, topped with melted cheese and croutons",
+      "category": "Soups",
+      "price": 5.99,
+      "image": "https://i.ibb.co/2hXtrcJ/French-Onion-Soup.jpg"
+    },
+    {
+      "_id": "20",
+      "name": "Ratatouille",
+      "recipe": "Traditional French vegetable stew with tomatoes, eggplant, zucchini, and bell peppers",
+      "category": "Vegetarian",
+      "price": 12.99,
+      "image": "https://i.ibb.co/vV7ys8H/Ratatouille.jpg"
+    },
+    {
+      "_id": "21",
+      "name": "Sushi Platter",
+      "recipe": "Assorted sushi rolls, sashimi, and nigiri",
+      "category": "Sushi",
+      "price": 18.99,
+      "image": "https://i.ibb.co/tpZ4Rfx/Sushi-Platter.jpg"
+    },
+    {
+      "_id": "22",
+      "name": "Key Lime Pie",
+      "recipe": "Tangy key lime filling in a graham cracker crust, topped with whipped cream",
+      "category": "Desserts",
+      "price": 6.99,
+      "image": "https://i.ibb.co/kmDC10b/molly-keesling-H-2f-VMiq-JF8-unsplash.jpg"
+    },
+    {
+      "_id": "23",
+      "name": "Pad Thai",
+      "recipe": "Stir-fried rice noodles with shrimp, tofu, peanuts, and bean sprouts",
+      "category": "Asian",
+      "price": 13.99,
+      "image": "https://i.ibb.co/fQ0NTq8/Pad-Thai.jpg"
+    },
+    {
+      "_id": "24",
+      "name": "BBQ Ribs",
+      "recipe": "Slow-cooked pork ribs glazed with tangy barbecue sauce",
+      "category": "Ribs",
+      "price": 17.99,
+      "image": "https://i.ibb.co/0qkpZzR/Beef-Lasagna.jpg"
+    },
+    {
+      "_id": "25",
+      "name": "Mushroom Risotto",
+      "recipe": "Creamy risotto cooked with mushrooms, garlic, and parmesan cheese",
+      "category": "Risotto",
+      "price": 14.99,
+      "image": "https://i.ibb.co/Lg3sNr7/ruth-georgiev-24-Ac3-Sl-Z-88-unsplash.jpg"
+    },
+    {
+      "_id": "26",
+      "name": "Hummus Platter",
+      "recipe": "Creamy chickpea dip served with pita bread, olives, and vegetables",
+      "category": "Appetizers",
+      "price": 7.99,
+      "image": "https://i.ibb.co/HDQHdxX/Hummus-Platter.jpg"
+    },
+    {
+      "_id": "27",
+      "name": "Steak Frites",
+      "recipe": "Grilled steak served with crispy French fries and garlic aioli",
+      "category": "Steak",
+      "price": 19.99,
+      "image": "https://i.ibb.co/qN2h5G0/Steak-Frites.jpg"
+    },
+    {
+      "_id": "28",
+      "name": "Eggplant Parmesan",
+      "recipe": "Breaded eggplant slices layered with marinara sauce and melted cheese",
+      "category": "Vegetarian",
+      "price": 10.99,
+      "image": "https://i.ibb.co/LpPc4sL/camila-melim-4-OEn-JUQ5mu-I-unsplash.jpg"
+    },
+    {
+      "_id": "29",
+      "name": "Thai Green Curry",
+      "recipe": "Spicy Thai curry with chicken, vegetables, and coconut milk",
+      "category": "Curries",
+      "price": 15.99,
+      "image": "https://i.ibb.co/MkKHqzW/Thai-Green-Curry.jpg"
+    },
+    {
+      "_id": "30",
+      "name": "Chocolate Chip Cookies",
+      "recipe": "Classic cookies filled with chocolate chips and walnuts Classic cookies filled with chocolate chips and walnuts ",
+      "category": "Desserts",
+      "price": 3.99,
+      "image": "https://i.ibb.co/7YvXfCs/chocochip-cookie.jpg"
+    }
+  ]
+  
