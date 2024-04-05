@@ -31,70 +31,138 @@ const Category = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="https://i.ibb.co/Pg817G8/slide1.jpg" alt="1" />
-          <h3 className="text-4xl text-white uppercase text-center -mt-12">Side Dishes</h3>
+          <img
+            className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
+            src="https://i.ibb.co/Pg817G8/slide1.jpg"
+            alt="1"
+          />
+          <div className="absolute">
+            <h3 className=" ml-10 text-white text-3xl uppercase   -mt-12 ">
+              Side Dishes
+            </h3>
+          </div>
         </SwiperSlide>
-       
 
         <SwiperSlide>
-          <img src="https://i.ibb.co/rZ6YBCS/slide2.jpg" alt="2" />
-          <h3 className="text-4xl text-white uppercase text-center -mt-12">Appetizers</h3>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://i.ibb.co/JrFSDHP/slide3.jpg" alt="3" />
-          <h3 className="text-4xl text-white uppercase text-center -mt-12">Fruit Salads</h3>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://i.ibb.co/s65pZK2/slide4.jpg" alt="4" />
-          <h3 className="text-4xl text-white uppercase text-center -mt-12">Pasta and Risotto</h3>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://i.ibb.co/KDMm8d8/slide5.jpg" alt="5" />
-          <h3 className="text-4xl text-white uppercase text-center -mt-12">Juice</h3>
+          <img
+            className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
+            src="https://i.ibb.co/rZ6YBCS/slide2.jpg"
+            alt="2"
+          />
+             <div className="absolute">
+            <h3 className=" ml-10 text-white text-3xl uppercase   -mt-12 ">
+            Appetizers
+          </h3>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img
+            className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
+            src="https://i.ibb.co/JrFSDHP/slide3.jpg"
+            alt="3"
+          />
+             <div className="absolute">
+            <h3 className=" ml-10 text-white text-3xl uppercase   -mt-12 ">
+            Fruit Salads
+          </h3>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
+            src="https://i.ibb.co/s65pZK2/slide4.jpg"
+            alt="4"
+          />
+             <div className="absolute">
+            <h3 className=" ml-10 text-white text-3xl uppercase   -mt-20 ">
+            Pasta and Risotto
+          </h3>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
+            src="https://i.ibb.co/KDMm8d8/slide5.jpg"
+            alt="5"
+          />
+             <div className="absolute">
+            <h3 className=" ml-10 text-white text-3xl uppercase   -mt-12 ">
+            Juice
+          </h3>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
             src="https://i.ibb.co/L1T0gHq/brooke-lark-1-Rm9-GLHV0-UA-unsplash.jpg"
             alt="7"
           />
-          <h3 className="text-4xl text-white uppercase text-center -mt-12">Salads</h3>
+             <div className="absolute">
+            <h3 className=" ml-10 text-white text-3xl uppercase   -mt-12 ">
+            Salads
+          </h3>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img
+            className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
             src="https://i.ibb.co/4ZJdD2D/frames-for-your-heart-6-KWBey-FPe-E-unsplash.jpg"
             alt="8"
           />
-          <h3 className="text-4xl text-white uppercase text-center -mt-12">Beef and Lamb</h3>
+             <div className="absolute">
+            <h3 className=" ml-10 text-white text-3xl uppercase   -mt-12 ">
+            Beef and Lamb
+          </h3>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img
+            className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
             src="https://i.ibb.co/YhtLhw2/jakub-dziubak-gj7-BLl-Sz-IFs-unsplash.jpg"
             alt="9"
           />
-          <h3 className="text-4xl text-white uppercase text-center -mt-12">Wine</h3>
+             <div className="absolute">
+            <h3 className=" ml-24 text-white text-3xl uppercase   -mt-12 ">
+            Wine
+          </h3>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img
+            className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
             src="https://i.ibb.co/61NG84v/jonathan-borba-5-E0d3lfo-C1w-unsplash.jpg"
             alt="10"
           />
-           <h3 className="text-4xl text-white uppercase text-center -mt-12">Vegetarian and Vegan</h3>
+             <div className="absolute">
+            <h3 className=" ml-10 text-white text-3xl uppercase   -mt-20 ">
+            Vegetarian and Vegan
+          </h3>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img
+            className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
             src="https://i.ibb.co/5jKV9TL/kamil-kalbarczyk-19-Ft3-Qfak-Mo-unsplash.jpg"
             alt=""
           />
-           <h3 className="text-4xl text-white uppercase text-center -mt-12">Poultry</h3>
+             <div className="absolute">
+            <h3 className=" ml-10 text-white text-3xl uppercase   -mt-12 ">
+            Poultry
+          </h3>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img
+            className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
             src="https://i.ibb.co/Pr9pnRR/lorena-samponi-Ju-Ae7-UZs68s-unsplash.jpg"
             alt=""
           />
-           <h3 className="text-4xl text-white uppercase text-center -mt-12">Desserts</h3>
+             <div className="absolute">
+            <h3 className=" ml-10 text-white text-3xl uppercase   -mt-12 ">
+            Desserts
+          </h3>
+          </div>
         </SwiperSlide>
-       
       </Swiper>
     </>
   );
