@@ -3,10 +3,12 @@ import { Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 
 const Category = () => {
   return (
-    <>
+    <section className="p-10">
+      <SectionTitle subHeading={"Delight in Culinary Creations Crafted with Passion"} heading={"Explore Our Menu"} ></SectionTitle>
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -28,7 +30,7 @@ const Category = () => {
           },
         }}
         modules={[Pagination]}
-        className="mySwiper"
+        className="mySwiper mb-24 "
       >
         <SwiperSlide>
           <img
@@ -164,7 +166,7 @@ const Category = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-    </>
+    </section>
   );
 };
 
