@@ -1,0 +1,38 @@
+[
+    {
+        "_id": "64301155f5a7e52ce1e8fa6a",
+        "name": "Emily Williams",
+        "details": "I have been using this app for a while now, and I must say, it's fantastic! The functionality is superb, and the design is elegant. Definitely worth trying out.",
+        "rating": 4
+    },
+    {
+        "_id": "6430116af5a7e52ce1e8fa6b",
+        "name": "Michael Brown",
+        "details": "The quality of this product exceeded my expectations. It's rare to find something that works so seamlessly. Kudos to the team behind it!",
+        "rating": 5
+    },
+    {
+        "_id": "6430117ef5a7e52ce1e8fa6c",
+        "name": "Sophia Johnson",
+        "details": "I've tried many similar services before, but none come close to this one. It's like they've thought of everything a user might need. Impressive work!",
+        "rating": 4
+    },
+    {
+        "_id": "64301193f5a7e52ce1e8fa6d",
+        "name": "David Wilson",
+        "details": "I initially had doubts, but after using it for a while, I'm completely sold. It simplifies my tasks and saves me a lot of time. Highly recommended.",
+        "rating": 5
+    },
+    {
+        "_id": "643011a7f5a7e52ce1e8fa6e",
+        "name": "Olivia Martinez",
+        "details": "This product is a game-changer! It's so intuitive to use, and the results are remarkable. I can't imagine going back to how I managed things before.",
+        "rating": 5
+    },
+    {
+        "_id": "643011bff5a7e52ce1e8fa6f",
+        "name": "Daniel Miller",
+        "details": "I've been recommending this service to all my friends and colleagues. It's rare to find something that not only meets but exceeds expectations.",
+        "rating": 4
+    }
+]

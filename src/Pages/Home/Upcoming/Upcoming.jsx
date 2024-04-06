@@ -1,8 +1,7 @@
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import "./Upcomming.css";
 import upcomming1 from "../../../assets/Home/menu/up-1.jpg";
-import upcomming2 from "../../../assets/Home/menu/up-2.jpg";
-import upcomming3 from "../../../assets/Home/menu/up-3.jpg";
+
 import upcomming4 from "../../../assets/Home/menu/up-4.jpg";
 
 const Upcoming = () => {
@@ -13,8 +12,8 @@ const Upcoming = () => {
         heading={"Upcoming Events"}
       ></SectionTitle>
 
-      <div className=" upComingImg md:flex space-x-10 items-center py-8 px-16 ">
-        <div className="w-2/3 mr-10 text-white">
+      <div className="text-white bg-fixed upComingImg md:flex space-x-10 items-center pb-20 py-8 px-16 ">
+        <div className="w-2/3 mr-10  bg-gray-300 bg-opacity-40 p-10">
           <p className="text-4xl font-semibold text-[#96705B] ">
             07/09/2024 — 08/09/2024
           </p>
@@ -28,19 +27,19 @@ const Upcoming = () => {
             holidays with every delicious treat
           </p>
           <div className="flex justify-between">
-            <p className="mt-8">Dessert</p>
-            <button className="btn btn-outline mt-5 ">VIEW</button>
+            <p className="mt-8">Dessert</p>         
+            <button className="btn btn-outline border-0 border-b-4  mt-5">VIEW</button>
           </div>
         </div>
         <div className="w-1/3">
           <img src={upcomming4} alt="" />
         </div>
       </div>
-      <div className="md:flex upComingImg2 space-x-10 items-center  ">
+      <div className="text-white bg-fixed upComingImg2 md:flex space-x-10 items-center pb-20 py-8 px-16   ">
         <div className="w-1/3 mr-10 p-8  ">
           <img src={upcomming1} alt="" />
         </div>
-        <div className="w-2/3 text-white ">
+        <div className="w-2/3 mr-10  bg-gray-300 bg-opacity-40 p-10 ">
           <p className="text-4xl font-semibold text-[#96705B] ">
             06/08/2024 — 12/08/2024
           </p>
@@ -55,7 +54,7 @@ const Upcoming = () => {
           </p>
           <div className="flex justify-between">
             <p className="mt-8">Napa Valley</p>
-            <button className="btn btn-outline mt-5 ">VIEW</button>
+            <button className="btn btn-outline border-0 border-b-4  mt-5 ">VIEW</button>
           </div>
         </div>
       </div>
