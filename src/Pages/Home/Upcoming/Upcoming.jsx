@@ -1,5 +1,5 @@
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
-
+import "./Upcomming.css";
 import upcomming1 from "../../../assets/Home/menu/up-1.jpg";
 import upcomming2 from "../../../assets/Home/menu/up-2.jpg";
 import upcomming3 from "../../../assets/Home/menu/up-3.jpg";
@@ -12,17 +12,20 @@ const Upcoming = () => {
         subHeading={"Check it Out"}
         heading={"Upcoming Events"}
       ></SectionTitle>
-      <div className="md:flex space-x-10 items-center ">
-      
-        <div className="w-2/3">
+
+      <div className=" upComingImg md:flex space-x-10 items-center py-8 px-16 ">
+        <div className="w-2/3 mr-10 text-white">
           <p className="text-4xl font-semibold text-[#96705B] ">
-          07/09/2024 — 08/09/2024
+            07/09/2024 — 08/09/2024
           </p>
           <p className="text-4xl font-bold hover:underline mt-5 ">
             Desert Festive
           </p>
           <p className="mt-5 ">
-          Indulge in the magic of the season with our array of festive desserts. From classic favorites to innovative creations, each bite is a celebration of sweetness. Join us in savoring the joy of the holidays with every delicious treat
+            Indulge in the magic of the season with our array of festive
+            desserts. From classic favorites to innovative creations, each bite
+            is a celebration of sweetness. Join us in savoring the joy of the
+            holidays with every delicious treat
           </p>
           <div className="flex justify-between">
             <p className="mt-8">Dessert</p>
@@ -33,11 +36,11 @@ const Upcoming = () => {
           <img src={upcomming4} alt="" />
         </div>
       </div>
-      <div className="md:flex space-x-10 items-center ">
-        <div className="w-1/3">
-          <img src={upcomming2} alt="" />
+      <div className="md:flex upComingImg2 space-x-10 items-center  ">
+        <div className="w-1/3 mr-10 p-8  ">
+          <img src={upcomming1} alt="" />
         </div>
-        <div className="w-2/3">
+        <div className="w-2/3 text-white ">
           <p className="text-4xl font-semibold text-[#96705B] ">
             06/08/2024 — 12/08/2024
           </p>

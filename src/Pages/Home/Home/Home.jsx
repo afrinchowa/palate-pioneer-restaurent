@@ -7,9 +7,12 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
+      <div className='max-w-screen-xl mx-auto'>
       <Category></Category>
       <PopularMenu></PopularMenu>
       <Upcoming></Upcoming>
+      </div>
+      
     </div>
   );
 };
