@@ -10,6 +10,7 @@ import SoupsImg from "../../../assets/Home/menu/Miso Soup.jpg"
 import DrinksImg from "../../../assets/Home/menu/Key Lime Pie.jpg"
 import PoultryImg from "../../../assets/Home/menu/Chicken Tikka Masala.jpg"
 import BurgersImg from "../../../assets/Home/menu/veg burger.jpg"
+import PastaImg from "../../../assets/Home/menu/clem-onojeghuo-zlABb6Gke24-unsplash.jpg"
 
 import useMenu from '../../../hooks/useMenu';
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
@@ -43,7 +44,7 @@ const Menu = () => {
           <MenuCategory items={Appetizers} title="Appetizers" img={AppetizersImg}></MenuCategory>
           <MenuCategory items={Soups} title="Soups" img={SoupsImg}></MenuCategory>
           <MenuCategory items={Drinks} title="Drinks" img={DrinksImg}></MenuCategory>
-          {/* <MenuCategory items={Pasta} title="Pasta" img={PastaImg}></MenuCategory> */}
+          <MenuCategory items={Pasta} title="Pasta" img={PastaImg}></MenuCategory>
           <MenuCategory items={Poultry} title="Poultry" img={PoultryImg}></MenuCategory>
           <MenuCategory items={Burgers} title="Burgers" img={BurgersImg}></MenuCategory>
         </div>

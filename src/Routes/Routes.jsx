@@ -7,6 +7,7 @@ import Gallery from "../Pages/Gallery/Gallery";
 import Blog from "../Pages/Blog/Blog";
 import Reservation from "../Pages/Reservation/Reservation";
 import Contact from "../Pages/Contact/Contact";
+import Order from "../Pages/Orders/Order/Order";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
         path: "menu",
         element: <Menu
         ></Menu>,
+      },
+      {
+        path: "order",
+        element: <Order></Order>,
       },
       {
         path: "events",
