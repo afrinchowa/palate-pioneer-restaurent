@@ -15,6 +15,10 @@ const Order = () => {
     "Vegetarian",
     "Appetizers",
     "Soups",
+    "Drinks",
+    "Pasta",
+    "Poultry",
+    "Burgers"
   ];
   const { category } = useParams();
   const initialIndex = categories.indexOf(category);
