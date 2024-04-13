@@ -28,7 +28,7 @@ const Upcoming = () => {
           </p>
           <div className="flex justify-between">
             <p className="mt-8">Dessert</p>         
-            <button className="btn btn-outline border-0 border-b-4  mt-5">VIEW</button>
+            <button className="btn btn-outline border-0 border-b-4 bg-[#AB8476]  mt-5">VIEW</button>
           </div>
         </div>
         <div className="w-1/3">
@@ -54,7 +54,7 @@ const Upcoming = () => {
           </p>
           <div className="flex justify-between">
             <p className="mt-8">Napa Valley</p>
-            <button className="btn btn-outline border-0 border-b-4  mt-5 ">VIEW</button>
+            <button className="btn btn-outline border-0 border-b-4 bg-[#AB8476]  mt-5 ">VIEW</button>
           </div>
         </div>
       </div>

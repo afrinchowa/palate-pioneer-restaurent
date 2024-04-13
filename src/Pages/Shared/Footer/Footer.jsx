@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer>
-      <div className="footer p-10 bg-neutral text-neutral-content">
+      <div className="footer p-10 bg-[#3D314A] text-neutral-content">
       <div>
         <svg
           width="50"
@@ -61,7 +61,7 @@ const Footer = () => {
 
      
     </div>
-    <div className=" p-4 footer-center bg-base-300 text-base-content">
+    <div className=" p-4 footer-center bg-[#AB8476] text-[#1A1423]">
         <div>
           <p>Copyright © 2024 - All right reserved by PALATE PIONEER Restaurent Ltd</p>
         </div>

@@ -12,7 +12,7 @@ const MenuCategory = ({items,title,img}) => {
           <MenuItem key={item._id} item={item}></MenuItem>
         ))}
       </div>
-      <Link to={`/order/${title}`}><button className="btn btn-outline border-0 border-b-4 mt-4">order</button></Link>
+      <Link to={`/order/${title}`}><button className="btn btn-outline border-0 bg-[#AB8476] border-b-4 mt-4">order</button></Link>
         </div>
     );
 };

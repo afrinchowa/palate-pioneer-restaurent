@@ -40,7 +40,7 @@ const Navbar = () => {
             <div
               tabIndex={0}
               role="button"
-              className="btn btn-ghost  lg:hidden"
+              className="btn btn-ghost bg-[#AB8476]  lg:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
