@@ -30,7 +30,7 @@ const PopularMenu = () => {
         ))}
       </div>
 
-      <button className="btn bg-[#AB8476] btn-outline border-0 border-b-4  mt-5 ">
+      <button  className="btn bg-[#AB8476] btn-outline border-0 border-b-4  mt-5 ">
         VIEW Our Full Menu
       </button>
     </section>
