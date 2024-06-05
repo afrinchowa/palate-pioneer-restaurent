@@ -1,11 +1,25 @@
 import { Helmet } from "react-helmet-async";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+
+  const onSubmit= (data) => {
+    console.log(data);
+
+    console.log(watch("example"))
   return (
+    
     <>
+    
       <Helmet>
-        <title>Bistro Boss | Sign Up </title>
+        <title>Palate Pioneer| Sign Up </title>
       </Helmet>
 
       <div className="hero min-h-screen bg-base-200">
@@ -19,7 +33,9 @@ const SignUp = () => {
             </p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+
+            
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
@@ -95,5 +111,6 @@ const SignUp = () => {
     </>
   );
 };
-
+}
 export default SignUp;
+
