@@ -1,4 +1,10 @@
+import { useContext, useState} from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+
 const Login = () => {
+const [disabled,setDisabled] = useState(true);
+
+const {signIn} =useContext(AuthContext);
 
     const handleLogin = event =>{
         event.preventDefault();
@@ -6,6 +12,11 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email,password);
+        signIn(email,password)
+        .then(result =>{
+          const user  = result.user;
+          console.log(user);
+        })
     }
   return (
     <div className="hero min-h-screen  bg-base-200">

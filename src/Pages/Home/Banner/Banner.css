@@ -1,0 +1,22 @@
+/* Banner.css */
+
+/* Hide the slide-changing loader */
+.awssld__bullets .awssld__bullet:last-child:before {
+    display: none !important;
+  }
+  
+  /* Additional styles for slider appearance */
+  .awssld__wrapper {
+    overflow: hidden;
+  }
+  
+  .awssld__content {
+    height: 100%;
+  }
+  
+  .awssld__content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  

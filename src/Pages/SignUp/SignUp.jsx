@@ -1,50 +1,14 @@
 import { Helmet } from "react-helmet-async";
-import { useForm } from "react-hook-form";
-import Swal from "sweetalert2";
-import { Link, useNavigate } from "react-router-dom";
-import useAxiosPublic from "../../hooks/useAxiosPublic";
-import useAuth from "../../hooks/useAuth";
+import { Link } from "react-router-dom";
+
+
+
 
 const SignUp = () => {
-  const axiosPublic = useAxiosPublic();
-  const {register, handleSubmit, reset,formState: { errors }} = useForm();
 
-  const {createUser, updateUserProfile } = useAuth;
-  const navigate = useNavigate();
 
-  const onSubmit = data => {
-    // console.log(data);
-    createUser(data.email, data.password)
-    .then(result => {
-      const loggedUser = result.user;
-      console.log(loggedUser);
-      updateUserProfile(data.name, data.photoURL)
-        .then(() => {
-          // console.log(" user profile info updated");
 
-          // create user entry in the database
-          const userInfo = {
-            name: data.name,
-            email: data.email,
-          };
-          axiosPublic.post("/users", userInfo)
-          .then(res => {
-            if (res.data.insertedId) {
-              console.log('user added to the database')
-              reset();
-              Swal.fire({
-                title: "Good job!",
-                text: "User Created Successfully",
-                icon: "success",
-              });
-              navigate("/");
-            }
-          });
-        })
-        .catch(error=> console.log(error));
-    });
-  };
-
+ 
   return (
     <>
       <Helmet>
@@ -62,21 +26,19 @@ const SignUp = () => {
             </p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+            <form className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
                 <input
                   type="text"
-                  {...register("name", { required: true })}
+                 
                   placeholder="Name"
                   name="name"
                   className="input input-bordered"
                 />
-                {errors.name && (
-                  <span className="text-red-600">This field is required </span>
-                )}
+                
               </div>
               <div className="form-control">
                 <label className="label">
@@ -84,16 +46,12 @@ const SignUp = () => {
                 </label>
                 <input
                   type="text"
-                  {...register("photoURL", { required: true })}
+                 
                   placeholder="Photo URL"
                   name="photoURL"
                   className="input input-bordered"
                 />
-                {errors.photoURL && (
-                  <span className="text-red-600">
-                    PhotoURL field is required{" "}
-                  </span>
-                )}
+          
               </div>
               <div className="form-control">
                 <label className="label">
@@ -101,14 +59,12 @@ const SignUp = () => {
                 </label>
                 <input
                   type="email"
-                  {...register("email", { required: true })}
+                 
                   name="email"
                   placeholder="email"
                   className="input input-bordered"
                 />
-                {errors.email && (
-                  <span className="text-red-600">This field is required </span>
-                )}
+               
               </div>
               <div className="form-control">
                 <label className="label">
@@ -116,37 +72,17 @@ const SignUp = () => {
                 </label>
                 <input
                   type="password"
-                  {...register("password", {
-                    required: true,
-                    minLength: 6,
-                    maxLength: 20,
-                    pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
-                  })}
+                  // {...register("password", {
+                  //   required: true,
+                  //   minLength: 6,
+                  //   maxLength: 20,
+                  //   pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
+                  // })}
                   name="password"
                   placeholder="password"
                   className="input input-bordered"
                 />
-                {errors.password?.type === "required" && (
-                  <p className="text-red-600" role="alert">
-                    Password is required
-                  </p>
-                )}
-                {errors.password?.type === "minlength" && (
-                  <span className="text-red-600">
-                    Password must have one uppercase, one lowercase , one letter
-                    and a special Charecter
-                  </span>
-                )}
-                {errors.password?.type === "pattern" && (
-                  <span className="text-red-600">
-                    Password must be 6 Charecters
-                  </span>
-                )}
-                {errors.password?.type === "maxlength" && (
-                  <span className="text-red-600">
-                    Password must be less than 20 Charecters
-                  </span>
-                )}
+               
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
