@@ -1,14 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-
-
-
 const SignUp = () => {
-
-
-
- 
   return (
     <>
       <Helmet>
@@ -33,12 +26,10 @@ const SignUp = () => {
                 </label>
                 <input
                   type="text"
-                 
                   placeholder="Name"
                   name="name"
                   className="input input-bordered"
                 />
-                
               </div>
               <div className="form-control">
                 <label className="label">
@@ -46,12 +37,10 @@ const SignUp = () => {
                 </label>
                 <input
                   type="text"
-                 
                   placeholder="Photo URL"
                   name="photoURL"
                   className="input input-bordered"
                 />
-          
               </div>
               <div className="form-control">
                 <label className="label">
@@ -59,12 +48,10 @@ const SignUp = () => {
                 </label>
                 <input
                   type="email"
-                 
                   name="email"
                   placeholder="email"
                   className="input input-bordered"
                 />
-               
               </div>
               <div className="form-control">
                 <label className="label">
@@ -82,7 +69,7 @@ const SignUp = () => {
                   placeholder="password"
                   className="input input-bordered"
                 />
-               
+
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
@@ -97,7 +84,11 @@ const SignUp = () => {
                 />
               </div>
             </form>
-            <p className="px-6"><small>Already have an account <Link to='/login'>Login</Link></small></p>
+            <p className="px-6">
+              <small>
+                Already have an account <Link to="/login">Login</Link>
+              </small>
+            </p>
           </div>
         </div>
       </div>
