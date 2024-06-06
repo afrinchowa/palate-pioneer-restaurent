@@ -6,18 +6,16 @@ const SignUp = () => {
   const {
     register,
     handleSubmit,
-    watch,
+
     formState: { errors },
-  } = useForm()
+  } = useForm();
 
-  const onSubmit= (data) => {
+  const onSubmit = (data) => {
     console.log(data);
+  };
 
-    console.log(watch("example"))
   return (
-    
     <>
-    
       <Helmet>
         <title>Palate Pioneer| Sign Up </title>
       </Helmet>
@@ -33,8 +31,6 @@ const SignUp = () => {
             </p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-
-            
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -42,10 +38,14 @@ const SignUp = () => {
                 </label>
                 <input
                   type="text"
+                  {...register("name", { required: true })}
                   placeholder="Name"
                   name="name"
                   className="input input-bordered"
                 />
+                {errors.name && (
+                  <span className="text-red-600">Name is required</span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -53,10 +53,14 @@ const SignUp = () => {
                 </label>
                 <input
                   type="text"
+                  {...register("photo", { required: true })}
                   placeholder="Photo URL"
                   name="photoURL"
                   className="input input-bordered"
                 />
+                {errors.name && (
+                  <span className="text-red-600">Photo Url is required</span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -64,10 +68,14 @@ const SignUp = () => {
                 </label>
                 <input
                   type="email"
+                  {...register("email", { required: true })}
                   name="email"
                   placeholder="email"
                   className="input input-bordered"
                 />
+                {errors.name && (
+                  <span className="text-red-600">Email is required</span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -75,17 +83,19 @@ const SignUp = () => {
                 </label>
                 <input
                   type="password"
-                  // {...register("password", {
-                  //   required: true,
-                  //   minLength: 6,
-                  //   maxLength: 20,
-                  //   pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
-                  // })}
+                  {...register("password", {
+                    required: true,
+                    minLength: 6,
+                    maxLength: 20,
+                    pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
+                  })}
                   name="password"
                   placeholder="password"
                   className="input input-bordered"
                 />
-
+                {errors.name && (
+                  <span className="text-red-600">Password is required</span>
+                )}
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
@@ -111,6 +121,5 @@ const SignUp = () => {
     </>
   );
 };
-}
-export default SignUp;
 
+export default SignUp;
