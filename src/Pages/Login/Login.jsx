@@ -1,5 +1,6 @@
 import { useContext, useState} from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 const Login = () => {
 const [disabled,setDisabled] = useState(true);
@@ -63,6 +64,11 @@ const {signIn} =useContext(AuthContext);
           </form>
         </div>
       </div>
+      <p className="px-6">
+              <small>
+                Not have an account ?<Link to="/signUp"><span className="text-blue-600">Sign Up</span></Link>
+              </small>
+            </p>
     </div>
   );
 };

@@ -1,19 +1,26 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const SignUp = () => {
   const {
     register,
     handleSubmit,
-
     formState: { errors },
   } = useForm();
+const {createUser} = useContext(AuthContext);
+
 
   const onSubmit = (data) => {
     console.log(data);
+    createUser(data.email, data.password)
+    .then(result => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
+    })
   };
-
   return (
     <>
       <Helmet>
@@ -58,7 +65,7 @@ const SignUp = () => {
                   name="photoURL"
                   className="input input-bordered"
                 />
-                {errors.name && (
+                {errors.photo && (
                   <span className="text-red-600">Photo Url is required</span>
                 )}
               </div>
@@ -73,7 +80,7 @@ const SignUp = () => {
                   placeholder="email"
                   className="input input-bordered"
                 />
-                {errors.name && (
+                {errors.email && (
                   <span className="text-red-600">Email is required</span>
                 )}
               </div>
@@ -93,8 +100,24 @@ const SignUp = () => {
                   placeholder="password"
                   className="input input-bordered"
                 />
-                {errors.name && (
+                {errors.password?.type == "required" && (
                   <span className="text-red-600">Password is required</span>
+                )}
+                {errors.password?.type == "required" && (
+                  <span className="text-red-600">
+                    Password must be at least 6 charecter
+                  </span>
+                )}
+                {errors.password?.type == "required" && (
+                  <span className="text-red-600">
+                    Password must be at most 20 charecter
+                  </span>
+                )}
+                {errors.password?.pattern == "required" && (
+                  <span className="text-red-600">
+                    Password at least one number ,one uppercase ,one lower case
+                    and a special charecter
+                  </span>
                 )}
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
@@ -112,7 +135,10 @@ const SignUp = () => {
             </form>
             <p className="px-6">
               <small>
-                Already have an account <Link to="/login">Login</Link>
+                Already have an account{" "}
+                <Link to="/login">
+                  <span className="text-blue-600">Login</span>
+                </Link>
               </small>
             </p>
           </div>
