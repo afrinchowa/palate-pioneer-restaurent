@@ -1,25 +1,37 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
-const {createUser} = useContext(AuthContext);
-
-
+  const { createUser, updateUserProfile } = useContext(AuthContext);
+const navigate  = useNavigate();
   const onSubmit = (data) => {
     console.log(data);
-    createUser(data.email, data.password)
-    .then(result => {
+    createUser(data.email, data.password).then((result) => {
       const loggedUser = result.user;
       console.log(loggedUser);
-    })
+      updateUserProfile(data.name, data.photoURL)
+        .then(() => {
+          console.log("user profile info updated");
+          reset();
+          Swal.fire({
+            title: "Good job!",
+            text: "You created successfully",
+            icon: "success"
+          });
+          navigate('/');
+        })
+        .catch((error) => console.log(error));
+    });
   };
   return (
     <>
@@ -54,7 +66,22 @@ const {createUser} = useContext(AuthContext);
                   <span className="text-red-600">Name is required</span>
                 )}
               </div>
-              
+
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo Url</span>
+                </label>
+                <input
+                  type="text"
+                  {...register("photoUrl", { required: true })}
+                  name="photoUrl"
+                  placeholder="Photo Url"
+                  className="input input-bordered"
+                />
+                {errors.photoUrl && (
+                  <span className="text-red-600">Photo Url is required</span>
+                )}
+              </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -99,7 +126,7 @@ const {createUser} = useContext(AuthContext);
                     Password must be at most 20 charecter
                   </span>
                 )}
-                {errors.password?.type== "pattern" && (
+                {errors.password?.type == "pattern" && (
                   <span className="text-red-600">
                     Password at least one number ,one uppercase ,one lower case
                     and a special charecter
