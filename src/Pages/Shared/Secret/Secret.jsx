@@ -3,7 +3,7 @@
 const Secret = () => {
     return (
         <div>
-            <h2>Secret things</h2>
+            Secret
         </div>
     );
 };
