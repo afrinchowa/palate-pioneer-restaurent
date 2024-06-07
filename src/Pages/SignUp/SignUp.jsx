@@ -54,21 +54,7 @@ const {createUser} = useContext(AuthContext);
                   <span className="text-red-600">Name is required</span>
                 )}
               </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Photo URL</span>
-                </label>
-                <input
-                  type="text"
-                  {...register("photo", { required: true })}
-                  placeholder="Photo URL"
-                  name="photoURL"
-                  className="input input-bordered"
-                />
-                {errors.photo && (
-                  <span className="text-red-600">Photo Url is required</span>
-                )}
-              </div>
+              
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -103,17 +89,17 @@ const {createUser} = useContext(AuthContext);
                 {errors.password?.type == "required" && (
                   <span className="text-red-600">Password is required</span>
                 )}
-                {errors.password?.type == "required" && (
+                {errors.password?.type == "minLength" && (
                   <span className="text-red-600">
                     Password must be at least 6 charecter
                   </span>
                 )}
-                {errors.password?.type == "required" && (
+                {errors.password?.type == "maxLength" && (
                   <span className="text-red-600">
                     Password must be at most 20 charecter
                   </span>
                 )}
-                {errors.password?.pattern == "required" && (
+                {errors.password?.type== "pattern" && (
                   <span className="text-red-600">
                     Password at least one number ,one uppercase ,one lower case
                     and a special charecter

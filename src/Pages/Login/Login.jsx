@@ -61,14 +61,15 @@ const {signIn} =useContext(AuthContext);
               
               <input type="submit" value='login' className="btn btn-primary" />
             </div>
-          </form>
-        </div>
-      </div>
-      <p className="px-6">
+            <p className="px-6">
               <small>
                 Not have an account ?<Link to="/signUp"><span className="text-blue-600">Sign Up</span></Link>
               </small>
             </p>
+          </form>
+        </div>
+      </div>
+      
     </div>
   );
 };
