@@ -40,7 +40,7 @@ const Navbar = () => {
       <li>
         <button className=" bg-transparent text-white">
         < FaShoppingCart/>
-          <div className="badge badge-neutral ">+0</div>
+          <div className="badge badge-neutral ">+2</div>
         </button>
       </li>
 
