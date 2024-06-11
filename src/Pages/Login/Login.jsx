@@ -97,7 +97,8 @@ const from  = location.state?.from?.pathname || "/"
               />
             </div>
             <div className="form-control mt-6">
-              <input disabled={disabled} type="submit" value="Login" className="btn btn-primary" />
+              {/* todo:disabled={disabled} */}
+              <input disabled={false} type="submit" value="Login" className="btn btn-primary" />
             </div>
           </form>
           <p className="px-6">
