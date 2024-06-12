@@ -4,63 +4,54 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useCart from "../../hooks/useCart";
 
-
-
-
 const FoodCard = ({ item }) => {
-  const { image, price, name, recipe,_id } = item;
-  const {user} = useAuth();
-const navigate = useNavigate();
-const location = useLocation();
-const axiosSecure =useAxiosSecure();
-const [, refetch]= useCart();
-
+  const { image, price, name, recipe, _id } = item;
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const axiosSecure = useAxiosSecure();
+  const [, refetch] = useCart();
 
   const handleAddToCart = () => {
-if(user && user.email){
-  // send cart item to the database
-const cartItem ={
-menuId:_id,
-email:user.email,
-name,
-image,
-price
-}
-axiosSecure.post('/carts',cartItem)
-.then(res=> {
-  console.log(res.data)
-  if(res.data.insertedId){
-    Swal.fire({
-      position: "top-end",
-      icon: "success",
-      title: `${name} added to your cart`,
-      showConfirmButton: false,
-      timer: 1500
-    });
-// refetch cart to update the cart items count 
-refetch();
-
-
-
-  }
-})
-}else{
-  Swal.fire({
-    title: "You are not logged in",
-    text: "Please log in to add to the cart",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Yes, Log in!"
-  }).then((result) => {
-    if (result.isConfirmed) {
-    //  send the user to the log in page
-navigate('/login',{state: {from:location} })
+    if (user && user.email) {
+      // send cart item to the database
+      const cartItem = {
+        menuId: _id,
+        email: user.email,
+        name,
+        image,
+        price,
+      };
+      axiosSecure.post("/carts", cartItem).then((res) => {
+        console.log(res.data);
+        if (res.data.insertedId) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: `${name} added to your cart`,
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          // refetch cart to update the cart items count
+          refetch();
+        }
+      });
+    } else {
+      Swal.fire({
+        title: "You are not logged in",
+        text: "Please log in to add to the cart",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, Log in!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          //  send the user to the log in page
+          navigate("/login", { state: { from: location } });
+        }
+      });
     }
-  });
-}
-
   };
   return (
     <div className="max-w-md rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
@@ -79,7 +70,7 @@ navigate('/login',{state: {from:location} })
           <p className="dark:text-[#1A1423]">{recipe}</p>
         </div>
         <button
-          onClick={ handleAddToCart}
+          onClick={handleAddToCart}
           className="btn bg-[#AB8476] btn-outline border-0 border-b-4 mt-4 bg"
         >
           Add to Cart

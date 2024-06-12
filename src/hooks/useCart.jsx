@@ -5,10 +5,9 @@ import useAuth from "./useAuth";
 const useCart = () => {
   //    tanstack query
   const axiosSecure = useAxiosSecure();
-const {user} =useAuth();
+  const { user } = useAuth();
 
-
-  const { refetch ,data: cart = [] } = useQuery({
+  const { refetch, data: cart = [] } = useQuery({
     queryKey: ["cart", user?.email],
     queryFn: async () => {
       const res = await axiosSecure.get(`/carts?email=${user.email}`);
@@ -16,7 +15,7 @@ const {user} =useAuth();
     },
   });
 
-  return [cart,refetch];
+  return [cart, refetch];
 };
 
 export default useCart;
