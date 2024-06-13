@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 <AuthProvider>
 <QueryClientProvider client={queryClient}>
-<HelmetProvider>F
+<HelmetProvider>
 <div className='text-[#1A1423]'>
    <RouterProvider router={router} />
    </div>

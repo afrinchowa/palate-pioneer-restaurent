@@ -42,10 +42,11 @@ const Navbar = () => {
         <Link to="contact">Contact</Link>
       </li>
       <li>
-        <button className=" bg-transparent text-white">
-        < FaShoppingCart/>
-          <div className="badge badge-neutral ">+{cart.length}</div>
-        </button>
+       <Link to="/dashboard/cart">
+       <button className=" bg-transparent text-white">
+        
+          <div className="badge badge-neutral ">< FaShoppingCart/>+{cart.length}</div>
+        </button></Link>
       </li>
 
       {user ? (
