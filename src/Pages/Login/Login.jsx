@@ -7,6 +7,7 @@ import {
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 const Login = () => {
   const [disabled, setDisabled] = useState(true);
@@ -48,7 +49,7 @@ const from  = location.state?.from?.pathname || "/"
 
   return (
     <div className="hero min-h-screen  bg-base-200">
-      <div className="hero-content flex-col md:flex-row-reverse">
+      <div className="hero-content w-1/2  flex-col md:flex-row-reverse">
         <div className="text-center md:w-1/2 lg:text-left">
           <h1 className="text-5xl font-bold">Login now!</h1>
         </div>
@@ -109,6 +110,7 @@ const from  = location.state?.from?.pathname || "/"
               </Link>
             </small>
           </p>
+          <SocialLogin></SocialLogin>
         </div>
       </div>
     </div>

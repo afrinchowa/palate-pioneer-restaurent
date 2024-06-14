@@ -1,11 +1,25 @@
-
+import { FaGoogle } from "react-icons/fa6";
+import useAuth from "../../hooks/useAuth";
 
 const SocialLogin = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  const { googleSignIn } = useAuth();
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+    .then((result) => {
+      console.log(result.user);
+    });
+  };
+  return (
+    <div className="p-8">
+      <div className="divider"></div>
+      <div>
+        <button onClick={handleGoogleSignIn} className="btn">
+          <FaGoogle className="mr-2" />
+          Google
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default SocialLogin;
