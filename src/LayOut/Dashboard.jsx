@@ -1,5 +1,5 @@
-import {  FaCalendar, FaHome, FaList, FaPhone, FaRavelry, FaSearch, FaShoppingCart } from "react-icons/fa";
-import { FaShop } from "react-icons/fa6";
+import {   FaCalendar, FaHome, FaList, FaPhone, FaRavelry, FaSearch, FaShoppingCart, FaUtensilSpoon } from "react-icons/fa";
+import { FaBook, FaShop, FaUser } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../hooks/useCart";
 
@@ -12,9 +12,39 @@ const Dashboard = () => {
   return (
     <div className="flex">
       {/* side bar */}
-      <div className="w-64 min-h-screen bg-[rgb(104,71,86)]">
+      <div className="w-64 min-h-screen bg-[#AB8476]">
         <ul className="menu p-4">
+        {
+          isAdmin ? 
+          <>
+  <li>
+            <NavLink to="/dashboard/adminHome">
+              <FaHome></FaHome> Admin Home
+            </NavLink>
+          </li>
           <li>
+            <NavLink to="/dashboard/addItems">
+              <FaUtensilSpoon/> Add Items </NavLink>
+          </li>
+          <li>
+            <NavLink to="/dashboard/manageItems">
+              <FaList/>Manage Items 
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/dashboard/manageBookings">
+              <FaBook/>Manage Bookings
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/dashboard/users">
+              <FaUser/>All Users
+            </NavLink>
+          </li>
+          </>
+          :
+          <>
+            <li>
             <NavLink to="/dashboard/userHome">
               <FaHome></FaHome> User Home
             </NavLink>
@@ -39,6 +69,8 @@ const Dashboard = () => {
               <FaShoppingCart></FaShoppingCart>My Cart({cart.length})
             </NavLink>
           </li>
+          </>
+        }
           {/* shared navlinks */}
           <div className="divider divider-neutral"></div>
           <li>
