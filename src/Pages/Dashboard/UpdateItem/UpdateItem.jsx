@@ -9,11 +9,10 @@ const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?expiration=600&key=${image_hosting_key}`;
 
 const UpdateItem = () => {
-    const { register, handleSubmit, reset } = useForm();
-    const axiosPublic = useAxiosPublic();
-    const axiosSecure = useAxiosSecure();
-  const {name,category,recipe,price,_id} = useLoaderData();
-
+    const { name, category, recipe, price, _id } = useLoaderData();
+  const { register, handleSubmit } = useForm();
+  const axiosPublic = useAxiosPublic();
+  const axiosSecure = useAxiosSecure();
   const onSubmit = async (data) => {
     console.log(data);
     // image upload to imgbb and then get an url
@@ -35,8 +34,8 @@ const UpdateItem = () => {
       //
       const menuRes = await axiosSecure.patch(`/menu/${_id}`, menuItem);
       console.log(menuRes.data);
-      if (menuRes.data.insertedId) {
-        reset();
+      if (menuRes.data.modifiedCount > 0) {
+        // reset();
         // show success pop-up
         Swal.fire({
           title: "Good job!",
@@ -55,14 +54,14 @@ const UpdateItem = () => {
         heading="Update item"
         subHeading="Refresh Info"
       ></SectionTitle>
-        <div className="m-6 p-20 bg-[#3D314A] text-black">
+      <div className="m-6 p-20 bg-[#3D314A] text-black">
         <form onSubmit={handleSubmit(onSubmit)}>
           <label className="form-control w-full ">
             <div className="label">
               <span className="label-text  text-white">Recipe name*</span>
             </div>
             <input
-            defaultValue={name}
+              defaultValue={name}
               {...register("name", { required: true })}
               type="text"
               placeholder="Recipe Name"
@@ -102,7 +101,7 @@ const UpdateItem = () => {
                 <span className="label-text  text-white">Price*</span>
               </div>
               <input
-              defaultValue={price}
+                defaultValue={price}
                 {...register("price", { required: true })}
                 type="number"
                 placeholder="Recipe Price"
@@ -116,7 +115,7 @@ const UpdateItem = () => {
               <span className="label-text  text-white">Recipe Details</span>
             </div>
             <textarea
-            defaultValue={recipe}
+              defaultValue={recipe}
               {...register("recipe", { required: true })}
               className="textarea textarea-bordered h-24"
               placeholder="Bio"
