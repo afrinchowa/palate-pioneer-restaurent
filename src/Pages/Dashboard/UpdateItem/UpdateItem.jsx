@@ -1,18 +1,19 @@
-import { useForm } from "react-hook-form";
+import { useLoaderData } from "react-router-dom";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import { FaUtensils } from "react-icons/fa";
-
-import "./AddItems.css";
+import { useForm } from "react-hook-form";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
-
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?expiration=600&key=${image_hosting_key}`;
-const AddItems = () => {
-  const { register, handleSubmit, reset } = useForm();
-  const axiosPublic = useAxiosPublic();
-  const axiosSecure = useAxiosSecure();
+
+const UpdateItem = () => {
+    const { register, handleSubmit, reset } = useForm();
+    const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure();
+  const {name,category,recipe,price,_id} = useLoaderData();
+
   const onSubmit = async (data) => {
     console.log(data);
     // image upload to imgbb and then get an url
@@ -32,14 +33,14 @@ const AddItems = () => {
         image: res.data.data.display_url,
       };
       //
-      const menuRes = await axiosSecure.post("/menu", menuItem);
+      const menuRes = await axiosSecure.patch(`/menu/${_id}`, menuItem);
       console.log(menuRes.data);
       if (menuRes.data.insertedId) {
         reset();
         // show success pop-up
         Swal.fire({
           title: "Good job!",
-          text: `${data.name} is added to the menu`,
+          text: `${data.name} is updated to the menu`,
           icon: "success",
           timer: 1500,
         });
@@ -51,16 +52,17 @@ const AddItems = () => {
   return (
     <div>
       <SectionTitle
-        heading="add an item"
-        subHeading="What's new?"
+        heading="Update item"
+        subHeading="Refresh Info"
       ></SectionTitle>
-      <div className="m-6 p-20 bg-[#3D314A] text-black">
+        <div className="m-6 p-20 bg-[#3D314A] text-black">
         <form onSubmit={handleSubmit(onSubmit)}>
           <label className="form-control w-full ">
             <div className="label">
               <span className="label-text  text-white">Recipe name*</span>
             </div>
             <input
+            defaultValue={name}
               {...register("name", { required: true })}
               type="text"
               placeholder="Recipe Name"
@@ -75,7 +77,7 @@ const AddItems = () => {
                 <span className="label-text  text-white">Category*</span>
               </div>
               <select
-                defaultValue="default"
+                defaultValue={category}
                 {...register("category", { required: true })}
                 className="select select-bordered w-full max-w-xs"
               >
@@ -100,6 +102,7 @@ const AddItems = () => {
                 <span className="label-text  text-white">Price*</span>
               </div>
               <input
+              defaultValue={price}
                 {...register("price", { required: true })}
                 type="number"
                 placeholder="Recipe Price"
@@ -113,6 +116,7 @@ const AddItems = () => {
               <span className="label-text  text-white">Recipe Details</span>
             </div>
             <textarea
+            defaultValue={recipe}
               {...register("recipe", { required: true })}
               className="textarea textarea-bordered h-24"
               placeholder="Bio"
@@ -128,7 +132,7 @@ const AddItems = () => {
           </div>
 
           <button className="btn btn-grad ">
-            Add Item <FaUtensils className="ml-4"></FaUtensils>
+            Confirm<FaUtensils className="ml-4"></FaUtensils>
           </button>
         </form>
       </div>
@@ -136,4 +140,4 @@ const AddItems = () => {
   );
 };
 
-export default AddItems;
+export default UpdateItem;
