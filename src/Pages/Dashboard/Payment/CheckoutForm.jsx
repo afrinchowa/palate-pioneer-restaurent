@@ -10,7 +10,7 @@ const CheckoutForm = () => {
   const elements = useElements();
   const axiosSecure = useAxiosSecure();
   const [cart] = useCart();
-
+const {user}=useAuth();
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
   useEffect(() => {
@@ -47,6 +47,17 @@ const CheckoutForm = () => {
       setError("");
     }
   };
+
+  // confirm a payment
+  const {} =await stripe.confirmCardPayment(clien6Secret,{
+    payment_method:{
+      card:card,
+      billing_details:{
+email:user?.email||'anonymous',
+name:user?.displayName ||'anonymous'
+      }
+    }
+  })
   return (
     <form onSubmit={handleSubmit}>
       <CardElement
