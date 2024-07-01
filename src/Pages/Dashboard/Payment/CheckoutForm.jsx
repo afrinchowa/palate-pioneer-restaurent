@@ -3,27 +3,30 @@ import { useEffect, useState } from "react";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import useCart from "../../../hooks/useCart";
 import useAuth from "../../../hooks/useAuth";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const CheckoutForm = () => {
   const [error, setError] = useState("");
   const [clientSecret, setClientSecret] = useState("");
   const [transactionId, setTransactionId] = useState("");
-
-
   const stripe = useStripe();
   const elements = useElements();
   const axiosSecure = useAxiosSecure();
-  const [cart] = useCart();
+  const [cart,refetch] = useCart();
   const { user } = useAuth();
+  const navigate = useNavigate();
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
   useEffect(() => {
+   if(totalPrice  > 0){
     axiosSecure
-      .post("/create-payment-intent", { price: totalPrice })
-      .then((res) => {
-        console.log(res.data.clientSecret);
-        setClientSecret(res.data.clientSecret);
-      });
+    .post("/create-payment-intent", { price: totalPrice })
+    .then((res) => {
+      console.log(res.data.clientSecret);
+      setClientSecret(res.data.clientSecret);
+    })
+   }
   }, [axiosSecure, totalPrice]);
 
   const handleSubmit = async (event) => {
@@ -83,7 +86,17 @@ const CheckoutForm = () => {
         
  const res =await axiosSecure.post('/payments', payment );
  console.log('payment saved',res.data);
-
+ refetch();
+if(res.data?.paymentResult?.insertedId){
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: "Thank you for the payment",
+    showConfirmButton: false,
+    timer: 1500
+  });
+  navigate('/dashboard/paymentHistory')
+}
       }
     }
   };
