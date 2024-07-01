@@ -3,10 +3,12 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 import { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../../hooks/useCart";
+import useAdmin from "../../../hooks/useAdmin";
 
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const  [isAdmin] =useAdmin();
   const [cart] =useCart();
   
   
@@ -15,7 +17,7 @@ const Navbar = () => {
       .then(() => {})
       .catch((error) => console.log(error));
   };
-  const navOptions = (
+  const navOptions = 
     <>
       <li>
         <Link to="/">Home</Link>
@@ -26,6 +28,17 @@ const Navbar = () => {
       <li>
         <Link to="/order/Dessert">Order</Link>
       </li>
+{
+user && isAdmin &&   <li>
+<Link to="/dashboard/adminHome">Dashboard</Link>
+</li>
+}
+{
+user && !isAdmin &&   <li>
+<Link to="/dashboard/userHome">Dashboard</Link>
+</li>
+}
+
       <li>
         <Link to="/events">Events</Link>
       </li>
@@ -65,7 +78,7 @@ const Navbar = () => {
         </>
       )}
     </>
-  );
+  
 
   return (
     <>
