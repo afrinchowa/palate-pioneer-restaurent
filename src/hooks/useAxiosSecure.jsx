@@ -2,7 +2,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import useAuth from "./useAuth";
 
-export const axiosSecure = axios.create({ baseURL: "http://localhost:4000" });
+export const axiosSecure = axios.create({ baseURL: "https://palate-pioneer-server.vercel.app" });
 const useAxiosSecure = () => {
   const navigate = useNavigate();
   const {logOut} =useAuth();
