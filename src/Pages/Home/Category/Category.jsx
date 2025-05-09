@@ -35,7 +35,7 @@ const Category = () => {
         <SwiperSlide>
           <img
             className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
-            src="https://i.ibb.co/Pg817G8/slide1.jpg"
+            src="https://i.ibb.co/V90hfdD/slide1.jpg"
             alt="1"
           />
           <div className="absolute">
@@ -48,7 +48,7 @@ const Category = () => {
         <SwiperSlide>
           <img
             className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
-            src="https://i.ibb.co/rZ6YBCS/slide2.jpg"
+            src="https://i.ibb.co/SVnyxpL/slide2.jpg"
             alt="2"
           />
              <div className="absolute">
@@ -60,7 +60,7 @@ const Category = () => {
         <SwiperSlide>
           <img
             className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
-            src="https://i.ibb.co/JrFSDHP/slide3.jpg"
+            src="https://i.ibb.co/C9pfGyQ/slide3.jpg"
             alt="3"
           />
              <div className="absolute">
@@ -72,7 +72,7 @@ const Category = () => {
         <SwiperSlide>
           <img
             className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
-            src="https://i.ibb.co/s65pZK2/slide4.jpg"
+            src="https://i.ibb.co/DYxk8RD/slide4.jpg"
             alt="4"
           />
              <div className="absolute">
@@ -84,7 +84,7 @@ const Category = () => {
         <SwiperSlide>
           <img
             className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
-            src="https://i.ibb.co/KDMm8d8/slide5.jpg"
+            src="https://i.ibb.co/17YShDS/slide5.jpg"
             alt="5"
           />
              <div className="absolute">
@@ -96,7 +96,7 @@ const Category = () => {
         <SwiperSlide>
           <img
             className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
-            src="https://i.ibb.co/L1T0gHq/brooke-lark-1-Rm9-GLHV0-UA-unsplash.jpg"
+            src="https://i.ibb.co/PTDkcpR/slide6.jpg"
             alt="7"
           />
              <div className="absolute">
@@ -108,7 +108,7 @@ const Category = () => {
         <SwiperSlide>
           <img
             className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
-            src="https://i.ibb.co/4ZJdD2D/frames-for-your-heart-6-KWBey-FPe-E-unsplash.jpg"
+            src="https://i.ibb.co/P4s8pqt/stella-de-smit-ra-E26-Th7-Nw-E-unsplash.jpg"
             alt="8"
           />
              <div className="absolute">
@@ -144,7 +144,7 @@ const Category = () => {
         <SwiperSlide>
           <img
             className="transition duration-300 ease-in-out hover:scale-110  brightness-50 hover:brightness-75 relative"
-            src="https://i.ibb.co/5jKV9TL/kamil-kalbarczyk-19-Ft3-Qfak-Mo-unsplash.jpg"
+            src="https://i.ibb.co/8mqry6L/the-nix-company-ljvm17b-H-e0-unsplash.jpg"
             alt=""
           />
              <div className="absolute">
