@@ -1,22 +1,30 @@
-/* Banner.css */
+.banner-caption {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  max-width: 90%;
+  font-size: 1.125rem;
+}
 
-/* Hide the slide-changing loader */
-.awssld__bullets .awssld__bullet:last-child:before {
-    display: none !important;
+@media (min-width: 768px) {
+  .banner-caption {
+    bottom: 2.5rem;
+    left: 2.5rem;
+    font-size: 1.875rem;
+    max-width: 70%;
   }
-  
-  /* Additional styles for slider appearance */
-  .awssld__wrapper {
-    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .banner-caption {
+    bottom: 18rem;
+    left: 8rem;
+    font-size: 2.25rem;
+    max-width: 40%;
   }
-  
-  .awssld__content {
-    height: 100%;
-  }
-  
-  .awssld__content img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+}
