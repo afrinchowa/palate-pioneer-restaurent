@@ -67,18 +67,39 @@ const Banner = () => {
               <div className="relative z-20 flex flex-col-reverse lg:flex-row items-center justify-between px-4 sm:px-8 lg:px-32 h-full gap-6">
                 {/* Text */}
                 <div className="flex-1 text-white space-y-4 max-w-xl mb-10 lg:mb-0">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                  <h1 className="text-2xl sm:text-4xl lg:text-6xl font-extrabold leading-tight">
                     {item.title} <br />
-                    <span className="text-yellow-400">{item.highlight}</span> Food
+                    <span className="text-yellow-400">
+                      {item.highlight}
+                    </span>{" "}
+                    Food
                   </h1>
-                  <div className="inline-flex text-sm font-medium rounded overflow-hidden">
-                    <span className="bg-white text-black px-4 py-2">Buy One. Get One</span>
-                    <span className="bg-red-500 text-white px-4 py-2">FREE</span>
-                  </div>
+<div className="inline-flex items-center text-base font-semibold rounded-md shadow-lg overflow-hidden">
+  {/* Left side: Offer text */}
+  <span className="bg-black text-white px-6 py-3 text-lg">
+    Buy One. Get One
+  </span>
+
+  {/* Right side: Sharper clipped FREE tag */}
+  <span
+    className="bg-red-600 text-white uppercase px-8 py-3 text-lg tracking-wide relative"
+    style={{
+      clipPath: 'polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%)',
+    }}
+  >
+    Free
+  </span>
+</div>
+
+
+
                   <p className="text-lg">
                     {item.desc.includes("$") ? (
                       <>
-                        Price: <span className="text-yellow-400 font-bold">{item.desc.split(":")[1]}</span>
+                        Price:{" "}
+                        <span className="text-yellow-400 font-bold">
+                          {item.desc.split(":")[1]}
+                        </span>
                       </>
                     ) : (
                       item.desc
@@ -86,10 +107,12 @@ const Banner = () => {
                   </p>
                   <p className="text-sm">
                     🛵 Delivery Order Num:{" "}
-                    <span className="text-red-400 font-medium">{item.orderNum}</span>
+                    <span className="text-red-400 font-medium">
+                      {item.orderNum}
+                    </span>
                   </p>
                   <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition">
-                  <Link to="/products">{item.cta} </Link>  
+                    <Link to="/products">{item.cta} </Link>
                   </button>
                 </div>
 
@@ -98,7 +121,7 @@ const Banner = () => {
                   <img
                     src={item.img}
                     alt="Dish"
-                    className="lg:w-full h-auto object-contain rounded-full shadow-2xl"
+                    className="w-full h-auto object-contain rounded-full shadow-2xl"
                   />
                 </div>
               </div>
