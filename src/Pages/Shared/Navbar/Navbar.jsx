@@ -59,12 +59,12 @@ const Navbar = () => {
   );
 
   return (
-    <div className="sticky top-0 z-50 bg-[#1d1d1d] text-white shadow-md">
+    <div className="sticky top-0 z-50 bg-black text-white shadow-md">
       <div className="navbar max-w-screen-2xl mx-auto px-4">
         <div className="navbar-start">
           {/* Mobile Dropdown */}
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost bg-[#AB8476] text-white lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost bg-yellow-400 text-white lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5"
                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round"
