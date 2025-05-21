@@ -17,7 +17,7 @@ const Footer = () => {
         <p>
         PALATE PIONEER restaurent Ltd.
           <br />
-          Providing reliable product since 1992
+          Providing reliable product since 2022
         </p>
       </div>
       <div>
@@ -61,9 +61,9 @@ const Footer = () => {
 
      
     </div>
-    <div className=" p-4 footer-center bg-[#AB8476] text-[#1A1423]">
+    <div className=" p-4 footer-center bg-yellow-400 text-[#1A1423]">
         <div>
-          <p>Copyright © 2024 - All right reserved by PALATE PIONEER Restaurent Ltd</p>
+          <p>Copyright © 2025 - All right reserved by PALATE PIONEER Restaurent Ltd</p>
         </div>
       </div>
     </footer>

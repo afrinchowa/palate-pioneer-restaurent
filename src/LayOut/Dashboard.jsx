@@ -18,12 +18,12 @@ const Dashboard = () => {
   const [cart] = useCart();
 
   // todo:get isAdmin value from the database
-  const [isAdmin] =useAdmin();
+  const [isAdmin] = useAdmin();
 
   return (
     <div className="flex">
       {/* side bar */}
-      <div className="w-64 min-h-screen bg-[#AB8476]">
+      <div className="w-64 min-h-screen bg-yellow-400">
         <ul className="menu p-4">
           {isAdmin ? (
             <>

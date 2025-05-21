@@ -44,7 +44,7 @@ const Reservation = () => {
 
       <div className="p-6 min-h-screen bg-gradient-to-br from-yellow-100 to-pink-100">
         <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-xl">
-          <h1 className="text-4xl font-bold text-[#AB8476] mb-6 text-center">
+          <h1 className="text-4xl font-bold text-yellow-400 mb-6 text-center">
             My Reservations
           </h1>
 

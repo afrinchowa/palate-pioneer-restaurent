@@ -27,7 +27,7 @@ const Category = () => {
   };
 
   return (
-    <section className="p-10">
+    <section className="px-10 pt-10">
       <SectionTitle
         subHeading="Delight in Culinary Creations Crafted with Passion"
         heading="Explore Our Menu"

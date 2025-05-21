@@ -10,7 +10,12 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 const Login = () => {
-  const { register, handleSubmit, formState: { errors }, setValue } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setValue,
+  } = useForm();
   const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -46,7 +51,9 @@ const Login = () => {
         <div className="max-w-4xl w-full bg-white/60 backdrop-blur-lg shadow-xl rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
           {/* Left Side: Form */}
           <div className="p-8 lg:p-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">Welcome Back 👋</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">
+              Welcome Back 👋
+            </h2>
             <p className="text-sm text-gray-600 mb-6">
               Login to continue your culinary journey with us.
             </p>
@@ -62,7 +69,9 @@ const Login = () => {
                   className="pl-10 py-3 w-full rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
                 />
                 {errors.email && (
-                  <span className="text-red-600 text-sm">Email is required</span>
+                  <span className="text-red-600 text-sm">
+                    Email is required
+                  </span>
                 )}
               </div>
 
@@ -76,13 +85,15 @@ const Login = () => {
                   className="pl-10 py-3 w-full rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
                 />
                 {errors.password && (
-                  <span className="text-red-600 text-sm">Password is required</span>
+                  <span className="text-red-600 text-sm">
+                    Password is required
+                  </span>
                 )}
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#AB8476] hover:bg-[#101135] text-white py-3 rounded-xl transition duration-300 font-semibold"
+                className="w-full bg-yellow-400 hover:bg-[#101135] text-white py-3 rounded-xl transition duration-300 font-semibold"
               >
                 Sign In
               </button>
@@ -90,7 +101,10 @@ const Login = () => {
 
             <p className="text-sm text-gray-600 mt-4">
               New to Palate Pioneer?{" "}
-              <Link to="/signup" className="text-[#AB8476] font-medium hover:underline">
+              <Link
+                to="/signup"
+                className="text-yellow-400 font-medium hover:underline"
+              >
                 Create an account
               </Link>
             </p>

@@ -29,7 +29,7 @@ const ReviewPage = () => {
 
       <div className="p-6 min-h-screen bg-gradient-to-br from-pink-100 to-yellow-100">
         <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-xl">
-          <h1 className="text-4xl font-bold text-[#AB8476] mb-6 text-center">
+          <h1 className="text-4xl font-bold text-yellow-400 mb-6 text-center">
             Share Your Feedback
           </h1>
 
@@ -47,7 +47,9 @@ const ReviewPage = () => {
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star
                       key={star}
-                      className={`cursor-pointer ${star <= rating ? "text-yellow-400" : "text-gray-300"}`}
+                      className={`cursor-pointer ${
+                        star <= rating ? "text-yellow-400" : "text-gray-300"
+                      }`}
                       size={24}
                       onClick={() => handleRating(star)}
                     />
@@ -69,7 +71,7 @@ const ReviewPage = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#AB8476] hover:bg-[#101135] text-white py-3 rounded-xl transition duration-300 font-semibold"
+                className="w-full bg-yellow-400 hover:bg-[#101135] text-white py-3 rounded-xl transition duration-300 font-semibold"
               >
                 Submit Review
               </button>

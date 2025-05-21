@@ -12,9 +12,9 @@ const Upcoming = () => {
         heading={"Upcoming Events"}
       ></SectionTitle>
 
-      <div className="text-white bg-fixed upComingImg md:flex space-x-10 items-center pb-20 py-8 px-16 ">
+      <div className="text-black bg-fixed upComingImg md:flex space-x-10 items-center pb-20 py-8 px-16 ">
         <div className="w-2/3 mr-10  bg-gray-300 bg-opacity-40 p-10">
-          <p className="text-4xl font-semibold text-[#96705B] ">
+          <p className="text-4xl font-semibold text-yellow-600 ">
             07/09/2024 — 08/09/2024
           </p>
           <p className="text-4xl font-bold hover:underline mt-5 ">
@@ -27,8 +27,10 @@ const Upcoming = () => {
             holidays with every delicious treat
           </p>
           <div className="flex justify-between">
-            <p className="mt-8">Dessert</p>         
-            <button className="btn btn-outline border-0 border-b-4 bg-[#AB8476]  mt-5">VIEW</button>
+            <p className="mt-8">Dessert</p>
+            <button className="btn btn-outline border-0 border-b-4 bg-yellow-400  mt-5">
+              VIEW
+            </button>
           </div>
         </div>
         <div className="w-1/3">
@@ -40,7 +42,7 @@ const Upcoming = () => {
           <img src={upcomming1} alt="" />
         </div>
         <div className="w-2/3 mr-10  bg-gray-300 bg-opacity-40 p-10 ">
-          <p className="text-4xl font-semibold text-[#96705B] ">
+          <p className="text-4xl font-semibold text-yellow-600 ">
             06/08/2024 — 12/08/2024
           </p>
           <p className="text-4xl font-bold hover:underline mt-5 ">
@@ -54,7 +56,9 @@ const Upcoming = () => {
           </p>
           <div className="flex justify-between">
             <p className="mt-8">Napa Valley</p>
-            <button className="btn btn-outline border-0 border-b-4 bg-[#AB8476]  mt-5 ">VIEW</button>
+            <button className="btn btn-outline border-0 border-b-4 bg-yellow-400  mt-5 ">
+              VIEW
+            </button>
           </div>
         </div>
       </div>

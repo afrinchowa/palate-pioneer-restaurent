@@ -13,7 +13,12 @@ import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const SignUp = () => {
   const axiosPublic = useAxiosPublic();
-  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const { createUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -47,9 +52,12 @@ const SignUp = () => {
         <div className="max-w-5xl w-full bg-white/60 backdrop-blur-lg shadow-xl rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
           {/* Form Side */}
           <div className="p-8 lg:p-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">Create Your Account 🍽️</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">
+              Create Your Account 🍽️
+            </h2>
             <p className="text-sm text-gray-600 mb-6">
-              Join the Palate Pioneer community and start your flavorful adventure.
+              Join the Palate Pioneer community and start your flavorful
+              adventure.
             </p>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
@@ -62,7 +70,9 @@ const SignUp = () => {
                   {...register("name", { required: true })}
                   className="pl-10 py-3 w-full rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
                 />
-                {errors.name && <span className="text-red-600 text-sm">Name is required</span>}
+                {errors.name && (
+                  <span className="text-red-600 text-sm">Name is required</span>
+                )}
               </div>
 
               {/* Photo URL */}
@@ -74,7 +84,11 @@ const SignUp = () => {
                   {...register("photoUrl", { required: true })}
                   className="pl-10 py-3 w-full rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
                 />
-                {errors.photoUrl && <span className="text-red-600 text-sm">Photo URL is required</span>}
+                {errors.photoUrl && (
+                  <span className="text-red-600 text-sm">
+                    Photo URL is required
+                  </span>
+                )}
               </div>
 
               {/* Email */}
@@ -86,7 +100,11 @@ const SignUp = () => {
                   {...register("email", { required: true })}
                   className="pl-10 py-3 w-full rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
                 />
-                {errors.email && <span className="text-red-600 text-sm">Email is required</span>}
+                {errors.email && (
+                  <span className="text-red-600 text-sm">
+                    Email is required
+                  </span>
+                )}
               </div>
 
               {/* Password */}
@@ -105,14 +123,15 @@ const SignUp = () => {
                 />
                 {errors.password && (
                   <span className="text-red-600 text-sm">
-                    Password must be 6-20 chars, include uppercase, lowercase, number & special char.
+                    Password must be 6-20 chars, include uppercase, lowercase,
+                    number & special char.
                   </span>
                 )}
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#AB8476] hover:bg-[#101135] text-white py-3 rounded-xl transition duration-300 font-semibold"
+                className="w-full bg-yellow-400 hover:bg-[#101135] text-white py-3 rounded-xl transition duration-300 font-semibold"
               >
                 Sign Up
               </button>
@@ -120,7 +139,10 @@ const SignUp = () => {
 
             <p className="text-sm text-gray-600 mt-4">
               Already have an account?{" "}
-              <Link to="/login" className="text-[#AB8476] font-medium hover:underline">
+              <Link
+                to="/login"
+                className="text-yellow-400 font-medium hover:underline"
+              >
                 Login here
               </Link>
             </p>

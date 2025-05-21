@@ -44,13 +44,13 @@ const ManageBookings = () => {
       </Helmet>
 
       <div className="p-4 min-h-screen bg-gradient-to-br from-yellow-50 to-pink-50">
-        <h1 className="text-3xl font-bold text-center mb-6 text-[#AB8476]">
+        <h1 className="text-3xl font-bold text-center mb-6 text-yellow-400">
           Manage Bookings
         </h1>
 
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white rounded-xl shadow-lg">
-            <thead className="bg-[#AB8476] text-white">
+            <thead className="bg-yellow-400 text-white">
               <tr>
                 <th className="py-3 px-4 text-left">Name</th>
                 <th className="py-3 px-4 text-left">Date</th>

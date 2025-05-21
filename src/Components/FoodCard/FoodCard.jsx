@@ -60,7 +60,7 @@ const FoodCard = ({ item }) => {
         alt=""
         className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500"
       />
-      <p className=" right-0 mr-4 mt-4 px-4 bg-[#96705B]">{price}</p>
+      <p className=" right-0 mr-4 mt-4 px-4 bg-yellow-600">{price}</p>
       <div className="flex flex-col items-center justify-between p-6 space-y-8">
         <div
           className="space-y-2 text-center
@@ -71,7 +71,7 @@ const FoodCard = ({ item }) => {
         </div>
         <button
           onClick={handleAddToCart}
-          className="btn bg-[#AB8476] btn-outline border-0 border-b-4 mt-4 bg"
+          className="btn bg-yellow-400 btn-outline border-0 border-b-4 mt-4 bg"
         >
           Add to Cart
         </button>

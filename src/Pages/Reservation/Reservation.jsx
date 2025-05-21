@@ -27,7 +27,13 @@ const Reservation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.name && formData.email && formData.phone && formData.date && formData.time) {
+    if (
+      formData.name &&
+      formData.email &&
+      formData.phone &&
+      formData.date &&
+      formData.time
+    ) {
       alert("Reservation made successfully!");
       setFormData({
         name: "",
@@ -48,15 +54,20 @@ const Reservation = () => {
 
       <div className="text-white bg-fixed .upComingImg md:flex space-x-10 items-center pb-20 py-8 px-16">
         <div className="w-1/2 mr-10 bg-gray-300 bg-opacity-40 p-10">
-          <p className="text-4xl font-semibold text-[#96705B]">Reserve a Table</p>
-          <p className="text-4xl font-bold hover:underline mt-5">The Ultimate Dining Experience</p>
+          <p className="text-4xl font-semibold text-yellow-600">
+            Reserve a Table
+          </p>
+          <p className="text-4xl font-bold hover:underline mt-5">
+            The Ultimate Dining Experience
+          </p>
           <p className="mt-5">
-            Experience exceptional dining with exquisite menus prepared by our talented chefs.
-            Reserve your table now to enjoy the finest delicacies in a beautiful and serene setting.
+            Experience exceptional dining with exquisite menus prepared by our
+            talented chefs. Reserve your table now to enjoy the finest
+            delicacies in a beautiful and serene setting.
           </p>
           <div className="flex justify-between mt-8">
             <p className="mt-8">Gourmet Dining</p>
-            <button className="btn btn-outline border-0 border-b-4 bg-[#AB8476] mt-5">
+            <button className="btn btn-outline border-0 border-b-4 bg-yellow-400 mt-5">
               LEARN MORE
             </button>
           </div>
@@ -67,7 +78,10 @@ const Reservation = () => {
       </div>
 
       <div className="bg-white p-16">
-        <form onSubmit={handleSubmit} className="max-w-3xl mx-auto bg-gray-100 p-8 rounded-lg shadow-lg">
+        <form
+          onSubmit={handleSubmit}
+          className="max-w-3xl mx-auto bg-gray-100 p-8 rounded-lg shadow-lg"
+        >
           <div className="mb-6">
             <label className="block text-lg font-semibold" htmlFor="name">
               Full Name
@@ -174,5 +188,5 @@ export default Reservation;
 //           <Helmet>
 //     <title>Palate Pioneer | Reservation</title>
 // </Helmet>
-//           Reservation  
+//           Reservation
 //         </div>

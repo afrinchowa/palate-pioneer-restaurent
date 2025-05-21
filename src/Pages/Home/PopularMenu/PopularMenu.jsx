@@ -18,7 +18,7 @@ const PopularMenu = () => {
   // }, []);
 
   return (
-    <section className="mb-12">
+    <section className="mb-">
       <SectionTitle
         subHeading={" Our Popular Items Makes Your Day"}
         heading={"From Our Menu"}
@@ -30,7 +30,7 @@ const PopularMenu = () => {
         ))}
       </div>
 
-      <button  className="btn bg-[#AB8476] btn-outline border-0 border-b-4  mt-5 ">
+      <button className="btn bg-yellow-400 btn-outline border-0 border-b-4  mt-5 ">
         VIEW Our Full Menu
       </button>
     </section>

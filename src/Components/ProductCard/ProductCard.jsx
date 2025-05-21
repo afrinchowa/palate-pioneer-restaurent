@@ -66,16 +66,16 @@ const ProductCard = ({ item }) => {
           <h2 className="card-title">{name}</h2>
           <p>{recipe}</p>
           <div className="flex justify-between items-center mt-4">
-            <span className="text-lg font-bold text-[#AB8476]">${price}</span>
+            <span className="text-lg font-bold text-yellow-400">${price}</span>
             <button
               onClick={handleAddToCart}
-              className="btn bg-[#AB8476] btn-outline border-0 border-b-4 mt-4 bg ml-1"
+              className="btn bg-yellow-400 btn-outline border-0 border-b-4 mt-4 bg ml-1"
             >
               Add to Cart
             </button>
             <button
               onClick={() => setModalIsOpen(true)}
-              className="btn bg-[#AB8476] btn-outline border-0 border-b-4 mt-4 bg ml-1"
+              className="btn bg-yellow-400 btn-outline border-0 border-b-4 mt-4 bg ml-1"
             >
               View Details
             </button>
@@ -118,7 +118,7 @@ const ProductCard = ({ item }) => {
           <div className="flex gap-4">
             <button
               onClick={handleAddToCart}
-              className="btn bg-[#AB8476] text-white"
+              className="btn bg-yellow-400 text-white"
             >
               Add to Cart
             </button>
